@@ -1,0 +1,9 @@
+<div id="whole">
+  <h1>Recommended States</h1>
+  <hr />
+  <p>Based on your results here are the top 5 states to consider in order:</p>
+  <!--displays top 5 states from the scoreArr object array filled in the priority-form.component.ts file-->
+  <div *ngFor="let scores of scoreResults | slice:0:5">
+    <div class="aState" (click)="showDetails(scores.number)">{{scores.name}}</div>
+  </div>
+</div>

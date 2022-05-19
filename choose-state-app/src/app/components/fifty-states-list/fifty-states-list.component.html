@@ -1,0 +1,10 @@
+<div id="whole">
+  <h1>State List</h1>
+  <hr />
+  <div *ngFor="let state of states">
+    <!--List all states by name
+    Clicking state name will navigate to detail-state.component html
+    Where state properties will display-->
+    <a class="aState" (click)="showDetails(state.number)">{{state.name}}</a>
+  </div>
+</div>

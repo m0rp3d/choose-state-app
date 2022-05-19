@@ -1,0 +1,29 @@
+#whole {
+    color: white;
+}
+
+hr {
+  border: 0;
+  margin: 0;
+  width: 100%;
+  height: 2px;
+  background: blue;
+}
+
+#instructions {
+    width: 70%;
+}
+
+.inputContainer {
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+.yellowfont {
+  color: yellow;
+}
+
+#submit {
+    width: 60%;
+    margin-top: 10px;
+}

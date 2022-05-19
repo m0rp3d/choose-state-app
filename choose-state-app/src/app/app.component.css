@@ -1,0 +1,35 @@
+#whole {
+  width: 60%;
+  /*background-color: navajowhite;*/
+  background-color: #fe4c39;
+  margin-top: 5%;
+  margin-left: 20%;
+  height: 1100px;
+}
+
+#verticalTop {
+  background-color: lightgray;
+  width: 100%;
+}
+
+.tab {
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+  margin-right: 5px;
+  font-size: 20px;
+  padding: 5px;
+}
+
+nav a.active {
+  background-color: #fe4c39;
+  /*color: white;
+  text-decoration: none;
+  margin-right: 5px;
+  font-size: 20px;
+  padding: 5px;*/
+}
+
+#display {
+    padding: 15px;
+}

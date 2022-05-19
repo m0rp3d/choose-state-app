@@ -1,0 +1,15 @@
+#whole {
+  color: white;
+}
+
+.aState:hover {
+  color: yellow;
+}
+
+hr {
+  border: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 2px;
+  background: blue;
+}

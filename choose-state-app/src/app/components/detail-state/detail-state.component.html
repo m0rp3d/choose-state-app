@@ -1,0 +1,35 @@
+<div id="whole">
+  <h2>{{state.name}}</h2>
+  <hr />
+  <!--Display the properties for the selected state-->
+  <div class="column">
+    <div class="detail">Unemployment rate: {{state.employment}}%</div>
+    <div class="detail">2021 growth rate: {{state.growth}}%</div>
+    <div class="detail">Average income: {{state.income}}</div>
+    <div class="detail">Median home price: {{state.home}}</div>
+    <div class="detail">High school graduation rate: {{state.graduation}}%</div>
+    <div class="detail">Percent with bachelors or above: {{state.college}}%</div>
+    <div class="detail">Poverty rate: {{state.poverty}}%</div>
+    <div class="detail">Homicide rate: {{state.homicide}} per 100,000</div>
+    <div class="detail">Percent without health insurance: {{state.insurance}}%</div>
+    <div class="detail">Average temperature: {{state.climate}}</div>
+    <div class="detail">Average monthly rent: {{state.rent}}</div>
+    <div class="detail">State tax rate: {{state.taxes}}%</div>
+  </div>
+  <!--Display national average for each factor(exception is state tax which doesn't apply)
+    this allows the user to compare the selected state with the national average-->
+  <div class="column">
+    <div class="detail">National unemployment rate: 3.6%</div>
+    <div class="detail">National real gdp growth: 5.7%</div>
+    <div class="detail">National median income: 64994</div>
+    <div class="detail">National home price: 269039</div>
+    <div class="detail">National graduation rate: 86%</div>
+    <div class="detail">National rate of bachelors or higher: 32.9%</div>
+    <div class="detail">National poverty rate: 12.8%</div>
+    <div class="detail">National homicide rate: 4.96 per 100,000</div>
+    <div class="detail">National rate without health insurance: 8.7%</div>
+    <div class="detail">National average temperature: 52.68</div>
+    <div class="detail">National gross rent: 1,096</div>
+    <!--<div class="detail">State tax: {{state.taxes}}</div>-->
+  </div>
+</div>

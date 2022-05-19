@@ -1,0 +1,92 @@
+<div id="whole">
+  <h1>State Priority Form</h1>
+  <hr />
+  <p id="instructions"><b>Instructions:</b> Place a number inside each input, with a higher number indicating higher importance of that factor. All points must be used until the available points equal zero. The total amount of points used should not exceed thirty and should not go below zero.</p>
+  <form [formGroup]="statePriorityForm" (ngSubmit)="onSubmit()">
+
+    <div class="inputContainer">
+      <label>Low Unemployment: </label>
+      <input formControlName="employment" type="number" [(ngModel)]="stateForm.employment" (change)="subtract(stateForm)" name="employment">
+      <small *ngIf="statePriorityForm.get('employment')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>Low Taxes: </label>
+      <input formControlName="taxes" type="number" [(ngModel)]="stateForm.taxes" (change)="subtract(stateForm)" name="taxes">
+      <small *ngIf="statePriorityForm.get('taxes')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>High Economic Growth: </label>
+      <input formControlName="growth" type="number" [(ngModel)]="stateForm.growth" (change)="subtract(stateForm)" name="growth">
+      <small *ngIf="statePriorityForm.get('growth')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>Median Income: </label>
+      <input formControlName="income" type="number" [(ngModel)]="stateForm.income" (change)="subtract(stateForm)" name="income">
+      <small *ngIf="statePriorityForm.get('income')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>Home affordability: </label>
+      <input formControlName="home" type="number" [(ngModel)]="stateForm.home" (change)="subtract(stateForm)" name="home">
+      <small *ngIf="statePriorityForm.get('home')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>High Graduation Rates: </label>
+      <input formControlName="graduation" type="number" [(ngModel)]="stateForm.graduation" (change)="subtract(stateForm)" name="graduation">
+      <small *ngIf="statePriorityForm.get('graduation')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>Percentage with a College Degree: </label>
+      <input formControlName="college" type="number" [(ngModel)]="stateForm.college" (change)="subtract(stateForm)" name="college">
+      <small *ngIf="statePriorityForm.get('college')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>Low Poverty: </label>
+      <input formControlName="poverty" type="number" [(ngModel)]="stateForm.poverty" (change)="subtract(stateForm)" name="poverty">
+      <small *ngIf="statePriorityForm.get('poverty')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>Low Homicide Rate: </label>
+      <input formControlName="homicide" type="number" [(ngModel)]="stateForm.homicide" (change)="subtract(stateForm)" name="homicide">
+      <small *ngIf="statePriorityForm.get('homicide')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>Percent covered by health insurance: </label>
+      <input formControlName="insurance" type="number" [(ngModel)]="stateForm.insurance" (change)="subtract(stateForm)" name="insurance">
+      <small *ngIf="statePriorityForm.get('insurance')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>Low Rent: </label>
+
+      <input formControlName="rent" type="number" [(ngModel)]="stateForm.rent" (change)="subtract(stateForm)" name="rent">
+
+      <small *ngIf="statePriorityForm.get('rent')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <div class="inputContainer">
+      <label>Pleasant Climate: </label>
+      <input formControlName="climate" type="number" [(ngModel)]="stateForm.climate" (change)="subtract(stateForm)" name="climate">
+      <small *ngIf="statePriorityForm.get('climate')?.hasError('inputTooLow')" class="yellowfont">  Input must be one or above.</small>
+    </div>
+
+    <label>Prefer cooler climate</label>
+    <input #checkForClimate type="checkbox" [checked]="cool" (change)="changeWarmerToCooler(checkForClimate.checked)" />
+
+    <p *ngIf="priorityPoints !== 0">
+      Points available: {{ priorityPoints }}
+    </p>
+
+    <div id="submit">
+      <button [disabled]="priorityPoints !== 0 || !statePriorityForm.valid" type="submit">Submit</button>
+    </div>
+  </form>
+</div>
