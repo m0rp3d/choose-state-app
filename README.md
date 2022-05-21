@@ -1,5 +1,5 @@
 # choose-state-app
-A simple full stack web app designed to allow users to find the right state to move to. The app allows the user to input numbers, where higher numbers give greater priority to several factors. From the form input the app will recommned a list of states best matching the user's preferences. The app uses angular framework for the frontend and spring boot for the backend. Features include spring rest jpa, angular http request, and angular form validation.
+A simple full stack web app designed to allow users to find the right state to move to. The app allows the user to input numbers, where higher numbers give greater priority to that factor. From the form input the app will recommned a list of states best matching the user's preferences. The app uses angular framework for the frontend and spring boot for the backend. Features include spring rest jpa, angular http request, and angular form validation.
 
 Here is a demo of the app in action:
 
